@@ -16,24 +16,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.test1_1);
 
-        btnVisible=(Button)findViewById(R.id.btnVisible);
+       /* btnVisible=(Button)findViewById(R.id.btnVisible);
         btnHidden=(Button)findViewById(R.id.btnHidden);
         txtView=(TextView)findViewById(R.id.txtView);
 
         btnVisible.setOnClickListener(this);
-        btnHidden.setOnClickListener(this);
+        btnHidden.setOnClickListener(this);*/
 
     }
 
     @Override
     public void onClick(View v){
-        if(v==btnVisible){
+       /* if(v==btnVisible){
             txtView.setVisibility(View.VISIBLE);
         }
         else if(v==btnHidden){
             txtView.setVisibility(View.INVISIBLE);
-        }
+        }*/
     }
 }
