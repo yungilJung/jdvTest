@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">jdvTest</string>
+    <string name="title_activity_dialog_test">DialogTest</string>
 </resources>
