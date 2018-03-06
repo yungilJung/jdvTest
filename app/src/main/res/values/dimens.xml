@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="bas_padding">5dp</dimen>
+    <dimen name="bas_margin">3dp</dimen>
 </resources>

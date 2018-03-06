@@ -3,6 +3,7 @@
     package="com.example.gili.jdvtest">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +12,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".DialogTest"
             android:label="@string/title_activity_dialog_test"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DiagTestActivity" />
+        <activity android:name=".EventActivity" />
+        <activity
+            android:name=".AnimActivity"
+            android:theme="@style/myTheme" />
+        <activity android:name=".multiActivity" />
+        <activity android:name=".Mission2Activity" />
+        <activity android:name=".Mission3Activity" />
+        <activity android:name=".ReadDBActivity" />
+        <activity android:name=".WriteDBActivity">            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity android:name=".ReadFileActivity" />
+        <activity android:name=".WriteFileActivity">
+
         </activity>
-        <activity android:name=".DiagTestActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".SettingsActivity">
+
         </activity>
     </application>
 

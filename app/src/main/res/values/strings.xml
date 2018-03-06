@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">jdvTest</string>
     <string name="title_activity_dialog_test">DialogTest</string>
+    <string name="imgConst">...</string>
+    <string name="note">To be, or not to be: that is the question</string>
 </resources>

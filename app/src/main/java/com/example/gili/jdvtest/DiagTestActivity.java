@@ -67,6 +67,8 @@ public class DiagTestActivity extends AppCompatActivity {
         btnCustom.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
+
+                // Custom Layout
                 AlertDialog.Builder builder = new AlertDialog.Builder(DiagTestActivity.this);
                 LayoutInflater inflator = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
                 View vw = inflator.inflate(R.layout.dialog, null);
