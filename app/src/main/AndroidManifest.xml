@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gili.jdvtest">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -26,17 +28,33 @@
         <activity android:name=".Mission2Activity" />
         <activity android:name=".Mission3Activity" />
         <activity android:name=".ReadDBActivity" />
-        <activity android:name=".WriteDBActivity">            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        <activity android:name=".WriteDBActivity" />
         <activity android:name=".ReadFileActivity" />
-        <activity android:name=".WriteFileActivity">
+        <activity android:name=".WriteFileActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SpannableActivity" />
+        <activity
+            android:name=".ActionBarActivity"
+            android:label="TEST"></activity>
+        <activity android:name=".IntentTestActivity">
 
         </activity>
-        <activity android:name=".SettingsActivity">
 
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.gili.jdvtest.test.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".FragmentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
