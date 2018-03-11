@@ -36,7 +36,7 @@
         <activity
             android:name=".ActionBarActivity"
             android:label="TEST" />
-        <activity android:name=".IntentTestActivity"></activity>
+        <activity android:name=".IntentTestActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -48,13 +48,14 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".FragmentActivity">
+        <activity android:name=".FragmentActivity" />
+        <activity android:name=".PhoneActivity"></activity>
+        <activity android:name=".AutoCompleteActivity">
 
         </activity>
-        <activity android:name=".PhoneActivity">
+        <activity android:name=".DrawableTabActivity" android:theme="@style/MainTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

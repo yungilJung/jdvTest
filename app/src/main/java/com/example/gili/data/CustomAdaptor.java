@@ -22,7 +22,7 @@ import java.util.List;
 public class CustomAdaptor extends ArrayAdapter<ListItem> {
     Context context;
     int resId;
-    ArrayList<ListItem> items = new ArrayList<>();
+    ArrayList<ListItem> items = new ArrayList<ListItem>();
 
     public CustomAdaptor(@NonNull Context context, int resource, ArrayList<ListItem> items) {
         super(context, resource, items);

@@ -29,10 +29,10 @@ public class WriteDBActivity extends AppCompatActivity {
                 if(!CommonUtils.checkEmptyValidation(txtContent, "내용을 입력해주세요")){return;};
 
                 DBHelper helper = new DBHelper(WriteDBActivity.this);
-                try (SQLiteDatabase db = helper.getWritableDatabase()) {
+              /*  try (SQLiteDatabase db = helper.getWritableDatabase()) {
                     db.execSQL("insert into tb_memo(title, content) values(?,?)", new String[]{txtTilte.getText().toString(), txtContent.getText().toString()});
                     db.close();
-                }
+                }*/
 
                 // 화면 전환...
                 Intent intent = new Intent(WriteDBActivity.this, ReadDBActivity.class);

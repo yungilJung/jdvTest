@@ -28,25 +28,25 @@ public class ReadDBActivity extends AppCompatActivity {
 
         ListView lstView = (ListView)findViewById(R.id.listView);
         DBHelper helper = new DBHelper(this);
-        try (SQLiteDatabase db = helper.getReadableDatabase()) {
+       /* try (SQLiteDatabase db = helper.getReadableDatabase()) {
             Cursor cursor = db.rawQuery("select _id, title, content from tb_memo order by _id desc ", null);
-           /* while(cursor.moveToNext()){
+           *//* while(cursor.moveToNext()){
                 CommonUtils.setTextView(ReadDBActivity.this, R.id.lblTitle, cursor.getString(0));
                 CommonUtils.setTextView(ReadDBActivity.this, R.id.lblContent, cursor.getString(1));
-            }*/
+            }*//*
 
-            /*ArrayAdapter arrary = new ArrayAdapter(this,android.R.layout.simple_list_item_1, data);
-            lstView.setAdapter(arrary);*/
+            *//*ArrayAdapter arrary = new ArrayAdapter(this,android.R.layout.simple_list_item_1, data);
+            lstView.setAdapter(arrary);*//*
 
-           /* SimpleAdapter adpater = new SimpleAdapter(this, data, android.R.layout.simple_list_item_1, new String[]{"_id","title"},new int[]{android.R.id.text1, android.R.id.text2});
-            lstView.setAdapter(adpater);*/
+           *//* SimpleAdapter adpater = new SimpleAdapter(this, data, android.R.layout.simple_list_item_1, new String[]{"_id","title"},new int[]{android.R.id.text1, android.R.id.text2});
+            lstView.setAdapter(adpater);*//*
 
-           /* CursorAdapter cursorAdapter = new SimpleCursorAdapter(this,android.R.layout.simple_list_item_2, cursor, new String[]{"_id","title"},new int[]{android.R.id.text1, android.R.id.text2},
+           *//* CursorAdapter cursorAdapter = new SimpleCursorAdapter(this,android.R.layout.simple_list_item_2, cursor, new String[]{"_id","title"},new int[]{android.R.id.text1, android.R.id.text2},
                     CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
 
-            lstView.setAdapter(cursorAdapter);*/
+            lstView.setAdapter(cursorAdapter);*//*
 
-            ArrayList<ListItem> datas = new ArrayList<>();
+            ArrayList<ListItem> datas = new ArrayList<ListItem>();
             while(cursor.moveToNext()){
                 ListItem item = new ListItem();
                 item.id = cursor.getString(0);
@@ -59,7 +59,7 @@ public class ReadDBActivity extends AppCompatActivity {
 
             CustomAdaptor adpator = new CustomAdaptor(this, R.layout.item_list, datas);
             lstView.setAdapter(adpator);
-        }
+        }*/
 
     }
 }

@@ -33,7 +33,7 @@ public class PhoneActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 200);
         }
 
-        ArrayList<CallLogVO> datas = new ArrayList<>();
+        ArrayList<CallLogVO> datas = new ArrayList<CallLogVO>();
 
         ListView listView = (ListView)findViewById(R.id.lstView);
         DBHelper2 helper2 = new DBHelper2(this);
