@@ -35,10 +35,8 @@
         <activity android:name=".SpannableActivity" />
         <activity
             android:name=".ActionBarActivity"
-            android:label="TEST"></activity>
-        <activity android:name=".IntentTestActivity">
-
-        </activity>
+            android:label="TEST" />
+        <activity android:name=".IntentTestActivity"></activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -51,8 +49,12 @@
         </provider>
 
         <activity android:name=".FragmentActivity">
+
+        </activity>
+        <activity android:name=".PhoneActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

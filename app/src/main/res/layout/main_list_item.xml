@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/main_item_preson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_background"
+        android:src="@drawable/hong"
+        />
+
+    <TextView
+        android:id="@+id/main_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:text="홍길동"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/main_item_preson"
+        />
+
+    <TextView
+        android:id="@+id/main_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1일전"
+        android:layout_below="@id/main_item_name"
+        android:layout_alignLeft="@id/main_item_name"
+        />
+
+    <ImageView
+        android:id="@+id/main_item_dialer"
+        android:src="@drawable/ic_dialer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>
