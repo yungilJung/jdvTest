@@ -49,13 +49,17 @@
         </provider>
 
         <activity android:name=".FragmentActivity" />
-        <activity android:name=".PhoneActivity"></activity>
-        <activity android:name=".AutoCompleteActivity">
+        <activity android:name=".PhoneActivity" />
+        <activity android:name=".AutoCompleteActivity"></activity>
+        <activity
+            android:name=".DrawableTabActivity"
+            android:theme="@style/MainTheme">
 
         </activity>
-        <activity android:name=".DrawableTabActivity" android:theme="@style/MainTheme">
+        <activity android:name=".NavigationDrawerActivity" android:theme="@style/Main2Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
