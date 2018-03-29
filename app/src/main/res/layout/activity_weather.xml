@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/todayImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/upImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_up"
+        android:layout_below="@id/todayImage"
+        android:layout_alignLeft="@id/todayImage"
+        />
+
+    <TextView
+        android:id="@+id/txtTodayMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@id/upImage"
+        android:layout_alignTop="@+id/upImage"
+        android:textSize="15dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/downImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_down"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@id/txtTodayMax"
+        android:layout_alignTop="@id/upImage"
+        />
+
+    <TextView
+        android:id="@+id/txtTodayMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@id/downImage"
+        android:layout_alignTop="@+id/upImage"
+        android:textSize="15dp"
+        />
+
+    <TextView
+        android:id="@+id/txtTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="80dp"
+        android:layout_below="@id/upImage"
+        android:layout_marginLeft="24dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/farrenheitImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_fahrenheit"
+        android:layout_alignTop="@id/txtTemperature"
+        android:layout_toRightOf="@id/txtTemperature"
+        android:layout_marginLeft="8dp" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTemperature"
+        ></android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

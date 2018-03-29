@@ -4,8 +4,17 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="com.example.gili.jdvtest.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +23,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD93IJbuKja766uLGpzrg4h3A5lEMpXF9c" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity android:name=".MainActivity" />
         <activity
             android:name=".DialogTest"
@@ -53,17 +69,54 @@
         <activity android:name=".AutoCompleteActivity" />
         <activity
             android:name=".DrawableTabActivity"
-            android:theme="@style/MainTheme"></activity>
+            android:theme="@style/MainTheme" />
         <activity
             android:name=".NavigationDrawerActivity"
-            android:theme="@style/Main2Theme">
+            android:theme="@style/Main2Theme" />
+        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".AlarmActivity" />
+        <activity android:name=".AlarmDispActivity">
+            <intent-filter>
+                <action android:name="com.example.gili.jdvtest.ACTION_ALARM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".NotiReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".CancelReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".BlogActivity" />
+        <activity android:name=".WeatherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".KakaoTaxyActivity" />
+        <activity android:name=".GoogleMapActivity"></activity>
+        <activity
+            android:name=".CameraAppActivity"
+            android:theme="@style/NoTitleTheme">
 
         </activity>
-        <activity android:name=".RecyclerViewActivity">            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        <receiver
+            android:name=".WidgetReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"></action>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_provider">
+            </meta-data>
+        </receiver>
     </application>
 
 </manifest>
